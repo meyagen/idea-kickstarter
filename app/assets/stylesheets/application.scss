@@ -1,0 +1,16 @@
+@import "semantic-ui";
+
+html, body {
+  height: 100%;
+}
+
+.main {
+  background-color: #F3F3F3;
+  min-height: 640px;
+  min-width: 360px;
+  padding-top: 50px;
+}
+
+.wrapper {
+  margin-top: 15px;
+}

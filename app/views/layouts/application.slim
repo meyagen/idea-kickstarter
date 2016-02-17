@@ -1,0 +1,13 @@
+doctype html
+html lang="en"
+  heads
+    title ToDo
+    = stylesheet_link_tag :application, media: :all, 'data-turbolinks-track' => true
+    = yield :stylesheets
+    = csrf_meta_tags
+
+  body
+    .main
+      = yield
+
+    = yield :javascripts

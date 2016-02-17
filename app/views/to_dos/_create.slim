@@ -1,0 +1,9 @@
+.centered.row
+  .eight.wide.column
+    .ui.yellow.segment
+      h3 Add ToDo
+      = form_for @todo, html: {class: 'ui form', id: 'item'} do |f|
+        label Description
+        = f.text_field :description
+        = f.submit "Submit", class: 'ui teal button'
+
