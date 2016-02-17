@@ -1,0 +1,15 @@
+.idea-item.ui.blue.card
+  .content
+    i.delete.right.floated.trash.outline.icon(data-id="#{idea.id}")
+    i.right.floated.heart.red.icon(data-id="#{idea.id}")
+    .header
+      | #{idea.title}
+    .meta
+      | #{idea.author}
+    .description
+      .content
+        | #{idea.description}
+  .extra.content
+    i.trophy.icon
+    .right.floated
+      strong.kudos = "#{idea.kudos} kudos!"

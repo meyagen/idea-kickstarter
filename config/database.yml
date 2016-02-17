@@ -3,19 +3,19 @@ default: &default
   encoding: unicode
   pool: 5
   port: 5432
-  username: meyagen
-  password: 1412017
+  username: kickstarter
+  password: k!ckst@rt3r
 
 development:
   <<: *default
-  database: todo_development
+  database: idea_kickstarter_development
 
 test:
   <<: *default
-  database: todo_test
+  database: idea_kickstarter_test
 
 production:
   <<: *default
-  database: todo_production
-  username: todo
-  password: <%= ENV['TODO_DATABASE_PASSWORD'] %>
+  database: idea_kickstarter_production
+  username: idea_kickstarter
+  password: <%= ENV['IDEA_KICKSTARTER_DATABASE_PASSWORD'] %>

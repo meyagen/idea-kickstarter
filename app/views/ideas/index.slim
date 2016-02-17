@@ -1,0 +1,29 @@
+- content_for :stylesheets do
+    = stylesheet_link_tag :ideas
+
+- content_for :javascripts do
+    = javascript_include_tag :ideas
+
+.ui.grid.container.wrapper
+  .centered.row
+    h1 Kickstart your Idea!
+  .centered.row
+    h4 See how your ideas rank up with everyone else's.
+  .centered.row
+    h4 Like an idea? Give the author a kudos to let them know!
+
+  .twelve.wide.centered.column
+    button.teal.ui.button#create-button Kickstart!
+    .ui.teal.segment.centered.cards
+      = render 'flash'
+
+      - if @ideas.any?
+        - @ideas.each do |idea|
+          = render 'card', idea: idea
+
+      - else
+        | No ideas to display. :( &nbsp;
+        | Why not add your own?
+
+    
+  = render 'create'

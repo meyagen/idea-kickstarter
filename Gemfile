@@ -18,8 +18,6 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'slim-rails'
 # Use Semantic UI as a front-end framework
 gem 'semantic-ui-sass', '~> 2.1.3', github: 'doabit/semantic-ui-sass'
-# Use jquery as the JavaScript library
-gem 'jquery-rails'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

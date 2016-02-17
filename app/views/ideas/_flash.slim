@@ -1,0 +1,17 @@
+- unless flash.empty?
+  - if flash[:alert]
+    .ui.icon.negative.message
+      i.remove.circle.icon
+      .content
+        .header Failed!
+        .list-wrapper
+          ul.ui.list
+            - flash[:alert].each do |error|
+              li #{error}
+
+  - if flash[:notice]
+      .ui.icon.success.message
+        i.check.circle.icon
+        .content
+          .header Success!
+          p = flash[:notice]

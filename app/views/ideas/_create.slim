@@ -1,0 +1,20 @@
+#create-modal.ui.small.modal
+  .centered.row
+    .eight.wide.column
+      .ui.yellow.segment
+        h3 Add Your Own Idea!
+        = form_for @idea, html: {class: 'ui form', id: 'item'} do |f|
+          .field
+            label Title
+            = f.text_field :title, placeholder: 'Awesome Idea'
+
+            label Description
+            = f.text_area :description, placeholder: "We're gonna make the world a better place... eventually!"
+
+            label Author
+            = f.text_field :author, placeholder: 'Juan dela Cruz'
+
+          .actions
+            #cancel-create.button.ui.red.button No, not now.
+            = f.submit "Submit", class: 'ui teal button'
+  
